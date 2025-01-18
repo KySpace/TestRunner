@@ -1,0 +1,12 @@
+# function name of the one default conversion before pipeline, no key needed
+default : ignorefrom(1, @id)
+# overwriting conversions
+overwrite : 
+  # $ marks the end of the matching, preventing further evaluating of the cell
+  - path  : root(/\w+({})*)*/ArgsConv$
+    funs  : ignorefrom(1, @parseargs)
+  - path  : root(/\w+({})*)*/FrameSize$
+    funs  : ignorefrom(1, @cell2mat)
+pipe : 
+  - path : root(/\w+({})*)*
+    funs : ignorefrom(1, mkreplacer(yaml.Null, {}))

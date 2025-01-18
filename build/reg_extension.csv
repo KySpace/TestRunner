@@ -1,0 +1,6 @@
+key_entry      ,   register_norm ,  register_trial
+   
+Connection     ,   regconn       ,  regconn
+Camera         ,   regcam        ,  regcam
+SequenceRunner ,   regseq        ,  regseq
+Analyzation    ,   trivial       ,  trivial

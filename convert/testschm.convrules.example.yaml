@@ -1,0 +1,11 @@
+# Function name of the one default conversion before pipeline, no key needed
+default : "@evalifstring"
+# Overwriting conversions.
+overwrite : 
+  # Most commonly, escape the evaluation of the following strings
+  - path  : root(/\w+({})*)*/fieldname/subfieldname
+    funs  : mkescevaluator(["escape this" "and this as well"])
+# Avoid yaml.Null on all occasions.
+pipe : 
+  - path : root(/\w+({})*)*
+    funs : ignorefrom(1, mkreplacer(yaml.Null, {}))

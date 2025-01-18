@@ -1,0 +1,7 @@
+{
+    "testrootdir" : {
+        "normal" : "Normal Directory, an absolute path with no trailing '/'",
+        "backup1" : "Alternative Directory, can have many with different keys",
+        "backup2" : "Alternative Directory, can have many with different keys"
+    }
+}
