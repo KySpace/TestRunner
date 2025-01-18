@@ -31,7 +31,7 @@ You can have your class inherit the `Iterator` (an abstract class defined in _th
 
 The `Iterator` inherits `DataContainer`, which requires you to specify which custom properties in the runner can be loaded and which parameters can be read through a dictionary automatically. You can also save some properties automatically. The specifications are registered simply by assigning string arrays to `confignames`, `paramsnames` and `datanames`. The loading and exporting functions are implemented automatically so you don't need to write again.
 
-Similarly, there is a `DataObserver` class that's for collecting data and do real-time analysis between steps. This can help capture some finer statistical features while avoid saving too muchd data to process in the end.
+Similarly, there is a `DataObserver` class that's for collecting data and do real-time analysis between steps. This can help capture some finer statistical features while avoid saving too much data to process in the end.
 
 Worry not that you forget to implement anything, because Matlab will tell you.
 

@@ -38,7 +38,7 @@ The `Priority` section allows you to change a variable according to other varyin
 ## Queues and Queue Manager
 Queues can acts as a event listener. But we can check what are the functions registered and manipulate them.
 ### Queue units
-A `QueueUnit` is just a cell array of function handles, along with a strings array as log. The basic methods fascillitates recording the function information when they are added. The `invoke` function can invoke all functions within the queue with arbitrary arguments, but all arguments within the queue are the same.
+A `QueueUnit` is just a cell array of function handles, along with a strings array as log. The basic methods facilitates recording the function information when they are added. The `invoke` function can invoke all functions within the queue with arbitrary arguments, but all arguments within the queue are the same.
 ### Queue Manager
 A `QueueManager` contains several `QueueUnit` that could be used during a multi-test. A successfully running multi-test contains three parts: initialization, variations on mono-tests, and finalization.   
 The following table shows what arguments are accepted by functions in each `QueueUnit`. a `✓` represent that the argument is acquired from the actual state, otherwise a constant value is fed in (usually because that the value is not well-defined).
@@ -111,7 +111,7 @@ where the `yaml_entry` is the entry from the `ioconfig` file under the right com
 The register map table is recorded in a `csv` file. The map also depends on an extra value from the key `TrialRun`. When set, data saving is expected to be disabled. 
 ### The register functions
 Naively, you may think the register function creates the corresponding objects/components used in the test, as well as putting future tasks such as updates or destructions somewhere in the `QueueManager` using the method `QueueManager::register`. But there are benefits to also postpone the initization of objects to `init` as well.
-These callback functions are defined as nested functions within the register function, able to capture the local variables. These functions can asign or access the relevant object in the `io` by it's name (which is usually specified in `ioconfig`) and the function `evalinio`. Therefore, you can refer to these objects in the `ioconfig` fields.
+These callback functions are defined as nested functions within the register function, able to capture the local variables. These functions can assign or access the relevant object in the `io` by it's name (which is usually specified in `ioconfig`) and the function `evalinio`. Therefore, you can refer to these objects in the `ioconfig` fields.
 
 
 
