@@ -6,7 +6,7 @@ arguments
 end
     if ~exist("config_local.json", "file")
         open(fileparts(which('settestdir')) + "/config_local.sample.json");
-        error('Please setup a "config_lib.json" file at root. See the sample');
+        error('Please setup a "config_local.json" file at root. See the sample');
     end
     if exist(entry_path.TestRoot, "dir")
         test_root_dir = entry_path.TestRoot;
